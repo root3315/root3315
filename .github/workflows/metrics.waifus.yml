@@ -14,7 +14,7 @@ jobs:
           token: NOT_NEEDED
           base: ""
           plugin_anilist: yes
-          plugin_anilist_user: ТВОЙ_ЛОГИН_АНИЛИСТ
+          plugin_anilist_user: retpop
           plugin_anilist_sections: characters
           plugin_anilist_limit_characters: 22
           plugin_anilist_shuffle: yes
