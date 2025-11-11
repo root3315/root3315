@@ -526,7 +526,7 @@ console.log("🚀 Запуск режима разработчика...");
 
 ---
 
-## 💞 Мои любимые персонажи
+## 💞 Мои любимые Waifu
 
 ![My favorite characters](./metrics.plugin.anilist.waifus.svg)
 
