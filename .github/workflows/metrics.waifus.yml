@@ -1,0 +1,20 @@
+name: Waifus simp 💖
+on:
+  schedule: [{cron: "0 0 * * *"}]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show my favorite waifus 😳
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.plugin.anilist.waifus.svg
+          token: NOT_NEEDED
+          base: ""
+          plugin_anilist: yes
+          plugin_anilist_user: ТВОЙ_ЛОГИН_АНИЛИСТ
+          plugin_anilist_sections: characters
+          plugin_anilist_limit_characters: 22
+          plugin_anilist_shuffle: yes
