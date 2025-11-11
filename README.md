@@ -16,7 +16,7 @@
 </div>
 
 ```typescript
-const stepan = {
+const Stepan = {
     роль: "Backend Developer | CTO | VP of Engineering",
     компания: "Bazier.live",
     опыт: {
