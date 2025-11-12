@@ -523,14 +523,17 @@ console.log("🚀 Запуск режима разработчика...");
 ![Postman](https://skillicons.dev/icons?i=postman)
 
 </div>
-
+<!-- Это комментарий, он не будет виден на GitHub -->
 ---
+
+<!--
 
 ## 💞 Мои любимые Waifu
 
 ![My favorite characters](./metrics.plugin.anilist.waifus.svg)
-
+-->
 ---
+
 
 <div align="center">
 
