@@ -526,12 +526,12 @@ console.log("🚀 Запуск режима разработчика...");
 <!-- Это комментарий, он не будет виден на GitHub -->
 ---
 
-<!--
 
-## 💞 Мои любимые Waifu
+
+## 💞 Мои любимые персонажи
 
 ![My favorite characters](./metrics.plugin.anilist.waifus.svg)
--->
+
 ---
 
 
