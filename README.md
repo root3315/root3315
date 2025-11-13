@@ -1,6 +1,6 @@
 <div align="center">
 
-# 👨‍💻 Привет! Я Степан Ионычев.
+# 👨‍💻 Привет! Я Степан Ионычев
 
 <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&duration=2800&pause=2000&color=A177FF&center=true&vCenter=true&width=940&lines=Backend+Developer+%F0%9F%9A%80;CTO+%26+VP+of+Engineering+%F0%9F%92%BC;5%2B+Years+in+Programming+%F0%9F%8E%AF;Building+Scalable+Systems+%E2%9A%A1" alt="Typing SVG" />
 
