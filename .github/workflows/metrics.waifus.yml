@@ -6,9 +6,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - name: Show my favorite waifus 😳
-        uses: lowlighter/metrics@latest
+        uses: lowlighter/metrics@v3.28
         with:
           filename: metrics.plugin.anilist.waifus.svg
           token: NOT_NEEDED
@@ -18,3 +19,7 @@ jobs:
           plugin_anilist_sections: characters
           plugin_anilist_limit_characters: 22
           plugin_anilist_shuffle: yes
+
+      - name: Report failure
+        if: failure()
+        run: echo "Workflow failed! Please check the logs for details."
