@@ -569,4 +569,22 @@ console.log("🚀 Запуск режима разработчика...");
 ![Powered by Coffee](https://img.shields.io/badge/Powered%20by-☕-brown?style=for-the-badge)
 ![Built with Code](https://img.shields.io/badge/Built%20with-💻-blue?style=for-the-badge)
 
+---
+
+## 🔧 CI/CD Improvements (2026)
+
+GitHub Actions workflows have been updated with:
+
+- ✅ **Pinned versions** - All actions use semantic versioning (`@v4`, `@v3.28`, `@v3.2.0`)
+- ✅ **Timeout protection** - Jobs configured with `timeout-minutes: 30`
+- ✅ **Error handling** - Failure detection steps with `if: failure()` condition
+- ✅ **Security hardening** - No more `@latest` tags, supply chain risks mitigated
+
+### Updated Workflows
+
+| Workflow | Changes |
+|----------|---------|
+| `metrics.waifus.yml` | `lowlighter/metrics@v3.28`, timeout + error handling |
+| `blank.yml` | `actions/checkout@v4`, `Platane/snk@v3.2.0`, timeout + error handling |
+
 </div>
