@@ -3,9 +3,7 @@ name: Generate Snake
 on:
   schedule:
     - cron: "0 */6 * * *"
-
   workflow_dispatch:
-
   push:
     branches:
       - main
@@ -13,13 +11,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 10 # 30 минут избыточно для змейки, 10 — безопаснее
 
     steps:
-      - name: Checkout
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Generate Snake
+      - name: Generate Snake Files
         uses: Platane/snk@v3.2.0
         id: snake-gif
         with:
@@ -31,24 +29,31 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Show build status
-        run: git status
+      # Расширенное логирование состояния перед деплоем
+      - name: Detailed Build Log
+        if: always()
+        run: |
+          echo "=== Отчет о генерации ==="
+          echo "Рабочая директория: $GITHUB_WORKSPACE"
+          if [ -d "dist" ]; then
+            echo "Список созданных файлов в dist/:"
+            ls -lh dist/
+          else
+            echo "Ошибка: Директория dist не найдена!"
+            exit 1
+          fi
 
-      - name: Push changes
-        uses: ad-m/github-push-action@v1.2.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: output
-          force: true
-
-      - name: Deploy to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v3.1.0
+      # Используем только один метод деплоя (самый надежный для этого случая)
+      - name: Deploy to Output Branch
+        uses: crazy-max/ghaction-github-pages@v4 # Обновлено до v4
         with:
           target_branch: output
           build_dir: dist
+          commit_message: "Update snake animation [skip ci]"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Report failure
+      - name: Final Status Report
         if: failure()
-        run: echo "Workflow failed! Please check the logs for details."
+        run: |
+          echo "::error title=Workflow Failed::Ошибка при генерации или пуше змейки. Проверьте разрешения GITHUB_TOKEN."
