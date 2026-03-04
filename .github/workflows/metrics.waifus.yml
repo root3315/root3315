@@ -1,4 +1,5 @@
 name: Waifus simp 💖
+
 on:
   schedule: [{cron: "0 0 * * *"}]
   workflow_dispatch:
@@ -6,20 +7,37 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 15 # Оптимизированное время ожидания
+
     steps:
-      - name: Show my favorite waifus 😳
+      - name: Generate Waifus Metrics
         uses: lowlighter/metrics@v3.28.0
+        id: generate-metrics
         with:
           filename: metrics.plugin.anilist.waifus.svg
-          token: NOT_NEEDED
+          token: ${{ secrets.METRICS_TOKEN }} # Рекомендуется использовать токен, даже если данные публичные
           base: ""
           plugin_anilist: yes
           plugin_anilist_user: retpop
           plugin_anilist_sections: characters
           plugin_anilist_limit_characters: 22
           plugin_anilist_shuffle: yes
+          # Настройки вывода (чтобы не пушить в main)
+          committer_branch: output
+          output_action: commit
+
+      - name: Detailed Plugin Log
+        if: always()
+        run: |
+          echo "=== Отчет по AniList плагину ==="
+          echo "Пользователь: retpop"
+          echo "Статус выполнения: ${{ steps.generate-metrics.outcome }}"
+          if [ "${{ steps.generate-metrics.outcome }}" == "success" ]; then
+            echo "SVG успешно сгенерирован и отправлен в ветку 'output'."
+          fi
 
       - name: Report failure
         if: failure()
-        run: echo "Workflow failed! Please check the logs for details."
+        run: |
+          echo "::error title=Metrics Failed::Не удалось получить данные из AniList или сохранить SVG."
+          echo "Проверьте, не изменил ли пользователь 'retpop' настройки приватности в AniList."
