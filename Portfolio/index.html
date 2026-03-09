@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио проектов | Степан Ионычев</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #A177FF, #61dafb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        header p {
+            color: #a0a0a0;
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            padding: 20px 0;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(161, 119, 255, 0.2);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .project-content {
+            padding: 24px;
+        }
+
+        .project-title {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            color: #fff;
+        }
+
+        .project-description {
+            color: #b0b0b0;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            background: rgba(161, 119, 255, 0.2);
+            color: #A177FF;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #61dafb;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .project-link:hover {
+            color: #A177FF;
+        }
+
+        .certificates-section {
+            margin-top: 60px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .certificates-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #61dafb, #A177FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .certificates-section p {
+            color: #a0a0a0;
+            line-height: 1.8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #606060;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🚀 Портфолио Проектов</h1>
+        <p>Избранные работы и достижения</p>
+    </header>
+
+    <div class="container">
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="./IMG_20251209_220834_730.jpg" alt="Проект 1" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Проект 1</h3>
+                    <p class="project-description">Описание проекта и ключевые особенности реализации.</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Backend</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="./IMG_20251209_220835_345.jpg" alt="Проект 2" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Проект 2</h3>
+                    <p class="project-description">Описание проекта и ключевые особенности реализации.</p>
+                    <div class="project-tags">
+                        <span class="tag">Node.js</span>
+                        <span class="tag">API</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="./IMG_20251209_220835_360.jpg" alt="Проект 3" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Проект 3</h3>
+                    <p class="project-description">Описание проекта и ключевые особенности реализации.</p>
+                    <div class="project-tags">
+                        <span class="tag">Database</span>
+                        <span class="tag">SQL</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="./IMG_20251209_220835_394.jpg" alt="Проект 4" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Проект 4</h3>
+                    <p class="project-description">Описание проекта и ключевые особенности реализации.</p>
+                    <div class="project-tags">
+                        <span class="tag">DevOps</span>
+                        <span class="tag">Docker</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="./IMG_20251209_220835_471.jpg" alt="Проект 5" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Проект 5</h3>
+                    <p class="project-description">Описание проекта и ключевые особенности реализации.</p>
+                    <div class="project-tags">
+                        <span class="tag">Security</span>
+                        <span class="tag">Nmap</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="./IMG_20251209_220849.jpg" alt="Проект 6" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Проект 6</h3>
+                    <p class="project-description">Описание проекта и ключевые особенности реализации.</p>
+                    <div class="project-tags">
+                        <span class="tag">Frontend</span>
+                        <span class="tag">UI/UX</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="./IMG_20251209_220946.jpg" alt="Проект 7" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Проект 7</h3>
+                    <p class="project-description">Описание проекта и ключевые особенности реализации.</p>
+                    <div class="project-tags">
+                        <span class="tag">ML/AI</span>
+                        <span class="tag">Data</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="./IMG_20251209_221053.jpg" alt="Проект 8" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Проект 8</h3>
+                    <p class="project-description">Описание проекта и ключевые особенности реализации.</p>
+                    <div class="project-tags">
+                        <span class="tag">Mobile</span>
+                        <span class="tag">Telegram</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="certificates-section">
+            <h2>🎓 Сертификаты</h2>
+            <p>все сертификаты за последний год</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Степан Ионычев | Made with ❤️</p>
+    </footer>
+</body>
+</html>
