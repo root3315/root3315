@@ -32,11 +32,17 @@ Backend-инженер с фокусом на распределённые си�
 ## Избранные проекты
 
 ### [UniSat](https://github.com/root3315/unisat) — универсальная платформа спутникового ПО
-`Python` · `C` · `STM32` · `FreeRTOS` · `Streamlit`
+`Python` · `C` · `STM32` · `FreeRTOS`
 
 Одна кодовая база → 14 форм-факторов: CanSat, CubeSat 1U–12U, HAB, ракета, дрон.
 Полный стек AX.25 v2.2 + CCSDS, HMAC-SHA256 аутентификация команд, FDIR на 12 отказов,
 471 тест, покрытие 85%+. Готовые миссии под UzCanSat, NASA CanSat, IREC.
+
+### [ExoVision (TIC-id)](https://github.com/root3315/TIC-id) — AI-анализ экзопланет NASA
+`Python` · `FastAPI` · `MongoDB` · `React` · `TypeScript`
+
+Веб-приложение для классификации экзопланет по данным TESS/Kepler.
+Оценка обитаемости с помощью ML, визуализация кривых блеска, интеграция с NASA API.
 
 ### [Bazier.live](https://bazier.live) — социальная сеть
 `Node.js` · `Express` · `MongoDB` · `Socket.io` · `AWS`
@@ -44,36 +50,17 @@ Backend-инженер с фокусом на распределённые си�
 Real-time сообщения, JWT-аутентификация, модерация контента, масштабируемая архитектура.
 Роль: CTO, проектирование архитектуры, CI/CD, руководство командой.
 
-### [ExoVision (TIC-id)](https://github.com/root3315/TIC-id) — AI-анализ экзопланет
-`Python` · `FastAPI` · `MongoDB` · `React` · `TypeScript`
+### [excel-auto-parser](https://github.com/root3315/excel-auto-parser) — zero-config парсер Excel
+`Python`
 
-Веб-приложение для классификации экзопланет по данным TESS/Kepler.
-Оценка обитаемости с помощью ML, визуализация кривых блеска, интеграция с NASA API.
+Автоматически находит таблицы в `.xlsx / .xls / .xlsb / .csv` без указания диапазонов.
+Экспорт в JSON / JSONL / CSV, веб-просмотрщик, потоковый режим для больших файлов.
 
 ### [CipherHound](https://github.com/root3315/CipherHound) — криптоанализ для CTF и пентеста
 `Python`
 
 Определяет схемы шифрования, типы хешей и кодировки: 20+ алгоритмов (MD5, SHA, bcrypt,
 Argon2, AES, RSA, ChaCha20). Энтропийный анализ, подбор XOR-ключа, плагинная архитектура.
-
-### [Aegis](https://github.com/root3315/Aegis) — сетевой аудит безопасности
-`Python`
-
-Многопоточный TCP-сканер с определением сервисов, баннер-граббингом и сопоставлением
-с базой уязвимостей. Отчёты в JSON / HTML / Markdown, настраиваемые режимы сканирования.
-
-### [binary-protocol-fuzzer](https://github.com/root3315/binary-protocol-fuzzer) — фаззер бинарных протоколов
-`C++`
-
-Поиск падений и уязвимостей в парсерах протоколов: мутационные стратегии
-(bit flips, integer overflow), дедупликация крэшей, coverage-tracking,
-детерминированное воспроизведение.
-
-### [excel-auto-parser](https://github.com/root3315/excel-auto-parser) — zero-config парсер Excel
-`Python`
-
-Автоматически находит таблицы в `.xlsx / .xls / .xlsb / .csv` без указания диапазонов.
-Экспорт в JSON / JSONL / CSV, веб-просмотрщик, потоковый режим для больших файлов.
 
 ## Статистика
 
