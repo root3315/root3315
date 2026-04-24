@@ -167,20 +167,22 @@ const stepan = {
 
 </div>
 
-### 📈 Активность
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=root3315&theme=tokyo-night&hide_border=true&area=true&custom_title=Контрибуции%20за%20год" width="100%"/>
-
 ### 🏆 Трофеи
 
 <div align="center">
-<img src="https://github-profile-trophy.vercel.app/?username=root3315&theme=tokyonight&no-frame=true&no-bg=true&row=1&column=7&margin-w=15" width="100%" />
+  <a href="https://github.com/ryo-ma/github-profile-trophy">
+    <img src="https://github-profile-trophy.vercel.app/?username=root3315&theme=tokyonight&margin-w=10&margin-h=10&column=-1&row=1" alt="GitHub Trophies" />
+  </a>
 </div>
 
 ### 🐍 Contribution Snake
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/root3315/root3315/output/github-contribution-grid-snake-dark.svg" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/root3315/root3315/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/root3315/root3315/output/github-contribution-grid-snake.svg">
+    <img alt="snake animation" src="https://raw.githubusercontent.com/root3315/root3315/output/github-contribution-grid-snake.svg">
+  </picture>
 </div>
 
 ---
